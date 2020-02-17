@@ -6,7 +6,7 @@
   </head>
   <body>
 
-<form class="" action="index.php" method="POST">
+<form class="" action="index2.php" method="POST">
   <h1>LotteryMachine 2.0.1</h1></br>
   <p>Choose your numbers:</p>
 
@@ -60,7 +60,6 @@ if (isset($_POST["submit"])) {
 
   if (!empty($_POST["numb1"]) and !empty($_POST["numb2"]) and !empty($_POST["numb3"])and !empty($_POST["numb4"])and !empty($_POST["numb5"])and !empty($_POST["numb6"])) {
 
-    echo $rand1 . $rand2 . $rand3 . $rand4 . $rand5 . $rand6;
 
     $postnum = array($_POST["numb1"],
     $_POST["numb2"],
@@ -70,18 +69,26 @@ if (isset($_POST["submit"])) {
     $_POST["numb6"]);
 
 
-    $randnum = array(rand(1,30),
-    rand(1,30),
-    rand(1,30),
-    rand(1,30),
-    rand(1,30),
-    rand(1,30),
+    $randnum = [];
+    $a = 1;
 
-  );
+     while ($a <= 6) {
+       $num = mt_rand(1,30);
+       if (!in_array($num, $randnum)) {
+         array_push ($randnum, $num);
+         $a++;// code...
+       }// code...
+     }
 
+     $count = 0;
+     foreach ($randnum as $key => $value) {
+         if(in_array(trim($value), $postnum))
+             $count++;
+     }
+     echo "Lottorivisi:" . " " . $postnum[0] . " " . $postnum[1] . " " . $postnum[2] . " " . $postnum[3] . " " . $postnum[4] . " " . $postnum[5] . "<br>";
+     echo "Voittorivi:" . " " . $randnum[0] . " " . $randnum[1] . " " . $randnum[2] . " " . $randnum[3] . " " . $randnum[4] . " " . $randnum[5] . "<br>";
+     echo $count;
 
-    echo $postnum[0] . $postnum[1] . $postnum[2] . $postnum[3] . $postnum[4] . $postnum[5] . "<br>";
-    echo $randnum[0] . $randnum[1] . $randnum[2] . $randnum[3] . $randnum[4] . $randnum[5] . "<br>";
 
 }
   else {
