@@ -82,7 +82,9 @@ if (isset($_POST["submit"])) {
     }
 
      for ($i=0; $i <= count(($randnum)-1) ; $i++) {
-          $postnum
+       if ($postnum[$i]= $randnum[$i]) {
+         
+       }
         }
 
      echo "Your numbers:" . " " . $postnum[0] . " " . $postnum[1] . " " . $postnum[2] . " " . $postnum[3] . " " . $postnum[4] . " " . $postnum[5] . "<br>";
