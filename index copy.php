@@ -79,20 +79,12 @@ if (isset($_POST["submit"])) {
          $a++;// code...
        }// code...
      }
+    }
 
+     for ($i=0; $i <= count(($randnum)-1) ; $i++) {
+          $postnum// code...
+        }
 
-     }
-     $count = 0;
-     foreach ($randnum as $key => $value) {
-         if(in_array(trim($value), $postnum))
-             $count++;
-
-             for ($i=0; $i <= count(($randnum)-1) ; $i++) {
-               $postnum// code...
-             }
-
-
-     }
      echo "Your numbers:" . " " . $postnum[0] . " " . $postnum[1] . " " . $postnum[2] . " " . $postnum[3] . " " . $postnum[4] . " " . $postnum[5] . "<br>";
      echo "Winning numbers:" . " " . $randnum[0] . " " . $randnum[1] . " " . $randnum[2] . " " . $randnum[3] . " " . $randnum[4] . " " . $randnum[5] . "<br>";
 
