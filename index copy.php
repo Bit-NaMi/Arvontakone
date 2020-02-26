@@ -6,7 +6,7 @@
   </head>
   <body>
 
-<form class="" action="index.php" method="POST">
+<form class="" action="index copy.php" method="POST">
   <h1>LotteryMachine 2.0.1</h1></br>
   <p>Choose your numbers:</p>
 
@@ -79,15 +79,13 @@ if (isset($_POST["submit"])) {
          $a++;
        }
      }
-    }
 
      $count = 0;
      for ($i=0; $i <= count($randnum)-1 ; $i++) {
-       if ($postnum[$i] == $randnum[$i])
-        $count++ {
+       if ($postnum[$i] == $randnum[$i]) {
+          $count++;}
 
-       }
-        }
+
 
      echo "Your numbers:" . " " . $postnum[0] . " " . $postnum[1] . " " . $postnum[2] . " " . $postnum[3] . " " . $postnum[4] . " " . $postnum[5] . "<br>";
      echo "Winning numbers:" . " " . $randnum[0] . " " . $randnum[1] . " " . $randnum[2] . " " . $randnum[3] . " " . $randnum[4] . " " . $randnum[5] . "<br>";
@@ -101,16 +99,14 @@ if (isset($_POST["submit"])) {
      if ($count < 6 and $count > 0) {
        echo "You got " . $count . " correct!";
      }
-
+   }
 }
 
   else {
     echo "You must enter all the six numbers!";
   }
 
-
 }
-
 
     ?>
 
