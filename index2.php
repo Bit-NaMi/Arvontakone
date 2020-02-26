@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>LotteryMachine</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
 
-<form class="" action="index copy.php" method="POST">
+<form class="" action="index2.php" method="POST">
   <h1>LotteryMachine 2.0.1</h1></br>
   <p>Choose your numbers:</p>
 
