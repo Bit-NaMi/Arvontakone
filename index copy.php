@@ -84,7 +84,7 @@ if (isset($_POST["submit"])) {
      for ($i=0; $i <= count($randnum)-1 ; $i++) {
        if ($postnum[$i] == $randnum[$i]) {
           $count++;}
-
+     }
 
 
      echo "Your numbers:" . " " . $postnum[0] . " " . $postnum[1] . " " . $postnum[2] . " " . $postnum[3] . " " . $postnum[4] . " " . $postnum[5] . "<br>";
@@ -99,7 +99,6 @@ if (isset($_POST["submit"])) {
      if ($count < 6 and $count > 0) {
        echo "You got " . $count . " correct!";
      }
-   }
 }
 
   else {
