@@ -81,9 +81,10 @@ if (isset($_POST["submit"])) {
      }
     }
 
-
+     $count = 0;
      for ($i=0; $i <= count($randnum)-1 ; $i++) {
-       if ($postnum[$i]= $randnum[$i]) {
+       if ($postnum[$i] == $randnum[$i])
+        $count++ {
 
        }
         }
