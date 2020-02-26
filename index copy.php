@@ -76,34 +76,34 @@ if (isset($_POST["submit"])) {
        $num = mt_rand(1,30);
        if (!in_array($num, $randnum)) {
          array_push ($randnum, $num);
-         $a++;// code...
-       }// code...
+         $a++;
+       }
      }
     }
 
      for ($i=0; $i <= count(($randnum)-1) ; $i++) {
-          $postnum// code...
+          $postnum
         }
 
      echo "Your numbers:" . " " . $postnum[0] . " " . $postnum[1] . " " . $postnum[2] . " " . $postnum[3] . " " . $postnum[4] . " " . $postnum[5] . "<br>";
      echo "Winning numbers:" . " " . $randnum[0] . " " . $randnum[1] . " " . $randnum[2] . " " . $randnum[3] . " " . $randnum[4] . " " . $randnum[5] . "<br>";
 
      if ($count == 0) {
-       echo "No correct numbers this time.";// code...
+       echo "No correct numbers this time.";
      }
      if ($count == 6) {
-       echo "Congratulations, you got all 6 right! You won the Lottery!";// code...
+       echo "Congratulations, you got all 6 right! You won the Lottery!";
      }
      if ($count < 6 and $count > 0) {
-       echo "You got " . $count . " correct!"; // code...
+       echo "You got " . $count . " correct!";
      }
 
 }
 
   else {
-    echo "You must enter all the six numbers!";// code...
+    echo "You must enter all the six numbers!";
   }
-  // code...
+
 
 }
 
