@@ -69,7 +69,7 @@ if (isset($_POST["submit"])) {
     $_POST["numb6"]);
 
 
-    $randnum = [];
+     $randnum = [];
     $a = 1;
 
      while ($a <= 6) {
